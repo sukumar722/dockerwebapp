@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devopsapp
+  namespace: webapps
 spec:
   replicas: 2
   selector:
@@ -20,7 +21,6 @@ spec:
             - containerPort: 8080
       imagePullSecrets:
         - name: flm
-
 
 
 
